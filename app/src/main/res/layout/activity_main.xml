@@ -1,9 +1,11 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
-android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
     android:stretchColumns="1,2,3"
     android:padding="5dp"
     android:id="@+id/tableLayout"
@@ -11,29 +13,30 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
 
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/tableRow0"
         android:baselineAligned="false"
         android:padding="5dp">
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bill_total"
             android:id="@+id/billTextView"
             android:layout_column="0"
             android:padding="5dp"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:typeface="normal" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/billEditText"
             android:layout_column="1"
-            android:hint="0.00" />
+            android:hint="@string/bill_amount"
+            android:layout_span="3" />
     </TableRow>
 
     <TableRow
@@ -44,6 +47,29 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
         android:padding="5dp">
 
 
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ten_percent"
+        android:id="@+id/tenTextView"
+            android:padding="5dp"
+        android:layout_column="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteen_percent"
+            android:id="@+id/fifteenTextView"
+            android:padding="5dp"
+            android:layout_column="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twenty_percent"
+            android:id="@+id/twentyTextView"
+            android:padding="5dp"
+            android:layout_column="3" />
     </TableRow>
 
     <TableRow
@@ -53,6 +79,39 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
         android:padding="5dp">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip"
+            android:id="@+id/tipTextView"
+            android:layout_column="0"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:padding="5dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tenEditText"
+            android:padding="5dp"
+            android:hint="@string/zero_value"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifteenEditText"
+            android:padding="5dp"
+            android:hint="@string/zero_value"
+            android:layout_column="2" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyEditText"
+            android:padding="5dp"
+            android:hint="@string/zero_value"
+            android:layout_column="3" />
     </TableRow>
 
     <TableRow
@@ -62,6 +121,15 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
         android:padding="5dp">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:id="@+id/totalTextView"
+            android:layout_column="0"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:padding="5dp" />
     </TableRow>
 
     <TableRow
@@ -71,6 +139,25 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
         android:padding="5dp">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom"
+            android:id="@+id/customTextView"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:gravity="end"
+            android:textSize="20sp" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customTipTextView"
+            android:layout_column="1"
+            android:layout_span="2"
+            android:progress="18"
+            android:focusable="false"
+            android:padding="5dp" />
     </TableRow>
 
     <TableRow
@@ -80,6 +167,39 @@ android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActi
         android:padding="5dp">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip"
+            android:id="@+id/tipCustomTextView"
+            android:layout_column="0"
+            android:textSize="20sp"
+            android:gravity="end" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="@string/zero_value"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:id="@+id/totalCustomTextView"
+            android:layout_column="2"
+            android:gravity="end"
+            android:padding="5dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:layout_column="3"
+            android:hint="@string/zero_value"
+            android:padding="5dp" />
     </TableRow>
 
 </TableLayout>
