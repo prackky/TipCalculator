@@ -9,7 +9,7 @@ xmlns:tools="http://schemas.android.com/tools"
     android:stretchColumns="1,2,3"
     android:padding="5dp"
     android:id="@+id/tableLayout"
-    android:background="#31bc">
+    android:background="#fff">
 
 
     <TableRow
@@ -28,7 +28,9 @@ xmlns:tools="http://schemas.android.com/tools"
             android:layout_column="0"
             android:padding="5dp"
             android:textSize="20sp"
-            android:typeface="normal" />
+            android:typeface="normal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical" />
 
         <EditText
             android:layout_width="match_parent"
@@ -36,6 +38,9 @@ xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/billEditText"
             android:layout_column="1"
             android:hint="@string/bill_amount"
+            android:inputType="numberDecimal"
+            android:longClickable="false"
+            android:cursorVisible="false"
             android:layout_span="3" />
     </TableRow>
 
@@ -53,7 +58,8 @@ xmlns:tools="http://schemas.android.com/tools"
         android:text="@string/ten_percent"
         android:id="@+id/tenTextView"
             android:padding="5dp"
-        android:layout_column="1" />
+        android:layout_column="1"
+            android:layout_gravity="center_vertical" />
 
         <TextView
             android:layout_width="match_parent"
@@ -61,7 +67,8 @@ xmlns:tools="http://schemas.android.com/tools"
             android:text="@string/fifteen_percent"
             android:id="@+id/fifteenTextView"
             android:padding="5dp"
-            android:layout_column="2" />
+            android:layout_column="2"
+            android:layout_gravity="center_vertical" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,33 +92,46 @@ xmlns:tools="http://schemas.android.com/tools"
             android:text="@string/tip"
             android:id="@+id/tipTextView"
             android:layout_column="0"
-            android:gravity="end"
+            android:gravity="center_vertical|end"
             android:textSize="20sp"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:layout_gravity="center_vertical" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tenEditText"
+            android:id="@+id/tip10EditText"
             android:padding="5dp"
             android:hint="@string/zero_value"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fifteenEditText"
+            android:id="@+id/tip15EditText"
             android:padding="5dp"
             android:hint="@string/zero_value"
-            android:layout_column="2" />
+            android:layout_column="2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/twentyEditText"
+            android:id="@+id/tip20EditText"
             android:padding="5dp"
             android:hint="@string/zero_value"
-            android:layout_column="3" />
+            android:layout_column="3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
     </TableRow>
 
     <TableRow
@@ -127,9 +147,43 @@ xmlns:tools="http://schemas.android.com/tools"
             android:text="@string/total"
             android:id="@+id/totalTextView"
             android:layout_column="0"
-            android:gravity="end"
+            android:gravity="center_vertical|end"
             android:textSize="20sp"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total10EditText"
+            android:layout_column="1"
+            android:hint="@string/zero_value"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total15EditText"
+            android:layout_column="2"
+            android:hint="@string/zero_value"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total20EditText"
+            android:layout_column="3"
+            android:hint="@string/zero_value"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
     </TableRow>
 
     <TableRow
@@ -146,18 +200,30 @@ xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/customTextView"
             android:layout_column="0"
             android:padding="5dp"
-            android:gravity="end"
-            android:textSize="20sp" />
+            android:gravity="center_vertical|end"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical" />
 
         <SeekBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/customTipTextView"
+            android:id="@+id/customSeekBar"
             android:layout_column="1"
             android:layout_span="2"
             android:progress="18"
+            android:padding="5dp"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/percent_value"
+            android:id="@+id/customTipTextView"
+            android:layout_column="3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:focusable="false"
-            android:padding="5dp" />
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -174,14 +240,19 @@ xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/tipCustomTextView"
             android:layout_column="0"
             android:textSize="20sp"
-            android:gravity="end" />
+            android:gravity="center_vertical|end"
+            android:layout_gravity="center_vertical" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/customTipEditText"
             android:hint="@string/zero_value"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -189,17 +260,22 @@ xmlns:tools="http://schemas.android.com/tools"
             android:text="@string/total"
             android:id="@+id/totalCustomTextView"
             android:layout_column="2"
-            android:gravity="end"
+            android:gravity="center_vertical|end"
             android:padding="5dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/customTotalEditText"
             android:layout_column="3"
             android:hint="@string/zero_value"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:longClickable="false"
+            android:cursorVisible="false" />
     </TableRow>
 
 </TableLayout>
